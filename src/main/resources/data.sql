@@ -1,0 +1,2 @@
+INSERT INTO users (id, password, email, birthday, name, age, age_floor,gender, disability, disability_detail, disability_rank, exercise_experience, exercise_purpose)
+VALUES ('testUser', '1234', 'test@example.com', '1998-10-24', '곽동현', 28, '20대','M', 'None', '', '', 'Beginner', 'Health');
