@@ -3,8 +3,16 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/my_database
     username: root
-    password: abc1234
+    password: Abcd1234!
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update  # (or validate, none, create-drop, create)
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    sql:
+      init:
+        mode: always  # 애플리케이션 실행 시 SQL 스크립트 실행
 
-mybatis:
-  mapper-locations: classpath:mapper/*.xml
-  config-location: classpath:mybatis-config.xml
