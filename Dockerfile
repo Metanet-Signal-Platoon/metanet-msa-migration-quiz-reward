@@ -35,10 +35,11 @@ FROM eclipse-temurin:21.0.2_13-jdk-alpine AS runtime
 WORKDIR /app
 
 # 빌드된 JAR 파일 복사 (하나의 실행 파일이 생성된다고 가정)
-COPY --from=builder /app/build/libs/*.jar app.jar
+#COPY --from=builder /app/build/libs/*.jar app.jar
+COPY /build/libs/back-end-bf-0.0.1-SNAPSHOT.war app.war
 
 # 애플리케이션 포트 노출
 EXPOSE 8080
 
 # 애플리케이션 실행
-CMD ["java", "-jar", "app.jar"]
+CMD ["java", "-jar", "app.war"]
