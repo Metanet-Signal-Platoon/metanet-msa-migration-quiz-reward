@@ -12,6 +12,9 @@ spring:
       hibernate:
         format_sql: true
         dialect: org.hibernate.dialect.MySQL8Dialect
+  h2:
+    console:
+      enabled: false
 #  sql:
 #    init:
 #        mode: always  # 애플리케이션 실행 시 SQL 스크립트 실행
