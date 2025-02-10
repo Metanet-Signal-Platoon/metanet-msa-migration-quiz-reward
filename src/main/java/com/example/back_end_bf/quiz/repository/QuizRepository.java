@@ -7,6 +7,6 @@ import org.springframework.data.jpa.repository.Query;
 import java.util.List;
 
 public interface QuizRepository extends JpaRepository<Quiz, Long> {
-    @Query(value = "SELECT * FROM Quiz WHERE category = 'OX퀴즈' ORDER BY RAND() LIMIT 3", nativeQuery = true)
+    @Query(value = "SELECT * FROM quiz WHERE category = 'OX퀴즈' ORDER BY RAND() LIMIT 3", nativeQuery = true)
     List<Quiz> findByRandomOXQuiz();
 }
